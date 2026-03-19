@@ -4,22 +4,22 @@ class Ipd < Formula
   version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/ipd/0.2.1/ipd-aarch64-apple-darwin.tar.xz"
-      sha256 "41dd24a90a25e19135d1d0740ab35ad6f58d99e3365a095429d527f74f9a6ea3"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.2.1/ipd-aarch64-apple-darwin.tar.xz"
+      sha256 "2f00dea4026e9e121adf871b7707699897a86d458b05f2ae7121a4fa93b1016b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/ipd/0.2.1/ipd-x86_64-apple-darwin.tar.xz"
-      sha256 "53eee4d7da15e24d683ab16a6c452c737278649dc8dcc2c04fb3539364d9e1cf"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.2.1/ipd-x86_64-apple-darwin.tar.xz"
+      sha256 "d7530b29efdb472b03af12b6a3a17ead4fb375cc8bd8475dc33b1ba9c902d3f0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/ipd/0.2.1/ipd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "62ee6acab6368af87a563acc274ce140b6a1381617bb5e3218a4de8075dd3e81"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.2.1/ipd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "643b4d5d708a26082cf98d0337eaba95c16d5a0c8126ca41d3fed51b6c4dfa2e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/ipd/0.2.1/ipd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6ac9f0341a7a8bffedd7a741f0c7738523062416bcadb9e600a221c89498fa95"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.2.1/ipd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0d91b6b7716ed789d7fdd64f0398ce87b4f9712d846956dabd38645070baa218"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
