@@ -1,25 +1,25 @@
 class Ipd < Formula
   desc "CLI tool to discover your public IP address"
   homepage "https://github.com/zer0horizon/ip-discovery"
-  version "0.3.0"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.3.0/ipd-aarch64-apple-darwin.tar.xz"
-      sha256 "a3251d108ddc05dffe72a15908681ee61d620c61da17efcbbd5ba8fd41b17846"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-aarch64-apple-darwin.tar.xz"
+      sha256 "50c88f61f34f4829d600fecfbc4680702b282c3bc30105ae6f2b74ae2175d949"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.3.0/ipd-x86_64-apple-darwin.tar.xz"
-      sha256 "9f5bce2ccac8a55e73b10981b51bbcce0f240cc62db09d727a5cf5bdb2951b51"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-x86_64-apple-darwin.tar.xz"
+      sha256 "1df4b85a3c1802c42a167104f2b3257276292fdd2f6591276a4c8b62bf592634"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.3.0/ipd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8d9cc4d2ead8338eff153bfd195b51eb9d8eafe1abb528b87b5451f32ede67e4"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5247d7ef09151ec4b072c4410dc62453cc5ed466304aae16b3f55b7267895d13"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.3.0/ipd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3b3288ba35128b037cb4888eecb469349fcce7dabee99dc752416fb1de817d11"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "23048f120d7f76b1473e964245c4046c663748fb0ba61d217a0939659ff043f0"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
