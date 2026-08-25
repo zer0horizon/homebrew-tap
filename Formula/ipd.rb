@@ -1,25 +1,25 @@
 class Ipd < Formula
   desc "CLI tool to discover your public IP address"
   homepage "https://github.com/zer0horizon/ip-discovery"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-aarch64-apple-darwin.tar.xz"
-      sha256 "50c88f61f34f4829d600fecfbc4680702b282c3bc30105ae6f2b74ae2175d949"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.5.0/ipd-aarch64-apple-darwin.tar.xz"
+      sha256 "8c1e98162302cbff869ce999df824947614bcac77486ab1a4bc60fbe92c997cf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-x86_64-apple-darwin.tar.xz"
-      sha256 "1df4b85a3c1802c42a167104f2b3257276292fdd2f6591276a4c8b62bf592634"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.5.0/ipd-x86_64-apple-darwin.tar.xz"
+      sha256 "7b1cd45d399bdea86640752d130da1d8b048dd51d4b0d2ec7dd1ca2743e9cb3c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5247d7ef09151ec4b072c4410dc62453cc5ed466304aae16b3f55b7267895d13"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.5.0/ipd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7da81be00f631e0fb12de7dfabb0e5edd5d77055acf644cafcc61205df83e0cb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.4.1/ipd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "23048f120d7f76b1473e964245c4046c663748fb0ba61d217a0939659ff043f0"
+      url "https://github.com/zer0horizon/ip-discovery/releases/download/v0.5.0/ipd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cb7f41109ea6217cf3cc449c130055a7e98a2a9fdfa76bfc808f2c40ea56e5a1"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class Ipd < Formula
   end
 
   def install
-    bin.install "ipd" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ipd" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ipd" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ipd" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ipd"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ipd"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ipd"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ipd"
+    end
 
     install_binary_aliases!
 
